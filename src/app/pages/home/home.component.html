@@ -1,21 +1,16 @@
-
-
 <app-menu-title></app-menu-title>
 <div class="container__articles">
     <div class="articles_main">
-        <app-big-card photoCover="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkPe9pNfrShEJZd-9vbLg3pzW7wQuea_pLxg&usqp=CAU"
-        cardTitle="Novo Homem de Ferro Anunciado" cardDescription="Novo filme do homem de ferro chegando aos cinemas em 2024." Id="1"
-        ></app-big-card>
+        <app-big-card [photoCover]="data[0].photoCover" [photoSource]="data[0].photoSource" [cardTitle]="data[0].title"
+            [cardDescription]="data[0].description" [Id]="data[0].id.toString()"></app-big-card>
     </div>
-    <div class="articles_others">
-        <app-small-card Id="2"
-        photoCover="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3q-Iry70s0bKQJoy69QFeS56YPBA0rnPgyw&usqp=CAU" cardTitle="Nova Série Disney"></app-small-card>
-        <app-small-card  Id="3"
-        photoCover="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQommmajwbAZtB2T-f8rx62RbDyz65d54uAZw&usqp=CAU"
-        cardTitle="Novo filme Pantera Negra"></app-small-card>
-        <app-small-card Id="4"
-        photoCover="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSZo7IqEUYLTbsC_Y63EgDDYDyG-FdTiPddw&usqp=CAU"
-        cardTitle="Novo filme do Dead Pool"
-        ></app-small-card>
+    <div  class="articles_others">
+        <ng-container *ngFor=" let item of data;index as i; first as isFirst">
+
+            <app-small-card  *ngIf="!isFirst"
+            [photoCover]="item.photoCover" [cardTitle]="item.title"
+                [Id]="data[0].id.toString()"></app-small-card>
+
+        </ng-container>
     </div>
 </div>

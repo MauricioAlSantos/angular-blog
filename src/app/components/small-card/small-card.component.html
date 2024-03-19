@@ -4,9 +4,17 @@
             <img alt=""
                 src={{photoCover}}>
         </div>
-        <div class="small-card__title">
-            <h1><a [routerLink]="['content',Id]">{{cardTitle}}</a></h1>
+        <div>
+            <div class="small-card__title">
+                <h1><a [routerLink]="['content',Id]">{{cardTitle}}</a></h1>
+            </div>
+            <div class="big-card__description">
+                <p><a href=""> {{cardDescription}}</a>
+                   
+                </p>
+            </div>
         </div>
+       
     </div>
     <div class="container__small-card-separator">
         <hr/>

@@ -1,8 +1,9 @@
 <div class="container__big-card">
 
     <div class="big-card__photo">
+        <a [href]="photoSource" target="_blank">
         <img alt="" width="400px"
-            src={{photoCover}}>
+            src={{photoCover}}></a>
     </div>
     <div class="big-card__title">
         <h1><a [routerLink]="['content',Id]">{{cardTitle}}</a></h1>

@@ -23,4 +23,5 @@
 }
 .big-card__photo > img{
     min-width: 100%;
+    box-shadow: 10px 9px 5px -8px rgba(92,54,92,1);
 }

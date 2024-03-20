@@ -6,11 +6,9 @@
     </div>
     <div  class="articles_others">
         <ng-container *ngFor=" let item of data;index as i; first as isFirst">
-
             <app-small-card  *ngIf="!isFirst"
-            [photoCover]="item.photoCover" [cardTitle]="item.title"
-                [Id]="data[0].id.toString()"></app-small-card>
-
+            [photoCover]="item.photoCover" [cardTitle]="item.title" [cardDescription]="item.description"
+                [Id]="item.id.toString()" [photoSource]="item.photoSource"></app-small-card>
         </ng-container>
     </div>
 </div>
